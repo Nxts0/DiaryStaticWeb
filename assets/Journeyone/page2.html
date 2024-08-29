@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Step</title>
+    <link rel="stylesheet" href="../css/page.css">
+    <style>
+        /* ใส่รูปภาพพื้นหลัง */
+        body {
+            background-image: url('../img/david-frasheski-tropicalspiresfin.jpg');
+        }
+        /* ใส่ระยะห่างของตัวกล่องด้านล่าง */
+        #Footer{
+            margin-top: 150px;
+        }
+        /* จัดตำแหน่งรูปภาพ box1 ให้อยู่ด้านซ้าย*/
+        #box1 > .pic {
+            float: left;
+        }
+        /* สร้างกล่องไว้ใส่ content ข้างในให้มีขนาด และกรอบรอบตัวหนังสือที่กำหนด และปรับตัวหนังสือล้นแบบ auto*/
+        .block {
+            height: 300px;
+            width: auto;
+            padding: 20px;
+            overflow: auto;
+        }
+        /* ตั้งค่าให้กล่องข้อความอยู่ด้านขวา และมีขนาดตามกำหนด */
+        .float {
+            float: right;
+            width: 50%;
+        }
+        /* ตั้งค่าให้กล่องข้อความอยู่ด้านซ้าย และมีขนาดตามกำหนด */
+        .float2 {
+            float: left;
+            width: 50%;
+        }
+        /* จัดตำแหน่งรูปภาพ box2 ให้อยู่ด้านขวา*/
+        #box2 > .pic {
+            float: right;
+        }
+        /* กำหนดให้กล่องแรก มีตัวหนังสือมีระยะห่างด้านบน */
+        p.float {
+            margin: 30px 20px auto auto;
+        }
+        /* กำหนดให้กล่องสอง มีตัวหนังสือมีระยะห่างด้านบน */
+        p.float2{
+            margin: 30px auto auto 20px;
+        }
+        /* สร้างกล่องเปล่าไว้ใส่วันที่ให้เป็น flex และข้างในอยู่ด้านขวา */
+        #date {
+            display: flex;
+            justify-content: flex-end;
+        }
+        /* กำหนดขนาดตัวหนังสือด้านใน มีขนาด ตำแหน่ง สี รูปแบบตามกำหนด และอยู่ด้านขวา */
+        #date > h2{
+            width: 100px;
+            height: 20px;
+            position: relative;
+            right: 70px;
+            font-size: 13px;
+            color: #9c9c9c;
+            font-weight: normal;
+            font-variant: small-caps;
+        }
+        /* กำหนดให้รูปภาพข้างในมีขนาด เงา กรอบ ไม่วนซ้ำ ตามกำหนด */
+        .pic{
+            width: 300px;
+            height: 200px;
+            border-radius: 5px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center bottom;
+            box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+        }
+        /* ใส่รูปภาพและจัดตำแหน่งรูป */
+        #pic2{
+            margin: 50px 50px auto auto;
+            background-image: url('../img/ghduse2.jpg');
+            background-position: center left;
+        }
+        /* ใส่รูปภาพและจัดตำแหน่งรูป */
+        #pic1{
+            margin: 70px auto auto 50px;
+            background-image: url('../img/ghduse3.jpg');
+        }
+        /* กำหนดให้กล่องข้อความแรกมีช่องว่างด้านบนเพิ่ม */
+        .block p {
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div id="Navbar">
+        <div class="Menu">
+            <div class="home"><a href="../../index.html">Home</a></div>
+            <a href="./page1.html">back</a>
+            <a href="./page3.html">next</a>
+        </div>
+    </div>
+
+    <div class="contentbox">
+        <div class="block" id="box1">
+            <div id="pic1" class="pic"></div>  
+            <p class="float">
+                Today is a very exciting day. Because now it's almost the end of junior high school, we plan to go to Koh Lipe together. after we finished the exam
+            </p>
+            <p class="float">
+                I'm going to Koh Lipe now. Looking forward, can't wait anymore.
+            </p>
+        </div>
+        <div class="block" id="box2">
+            <div id="pic2" class="pic"></div> 
+            <p class="float2">
+                The sea water is very beautiful and every corner of the photo is beautiful, like a paradise for sea lovers.
+                Upon arriving at the island we have to say wow It is during this time that the sun is good. 
+                Super clear sea water walk along the sandy beach White and soft and swim in the water, 
+                any beach is beautiful. Soak in the sea water until it's gone. I miss it. It's very satisfying.
+            </p>
+        </div>
+        <div id="date">
+            <h2>FEB 26 2019</h2>
+        </div>
+    </div>
+
+    <div id="Footer">
+        <div id="containfooter">
+            <div>
+                <h3>reference</h3>
+                <p><a href="../Thumbnail.html">thumbnail</a></p>
+            </div>
+            <div>
+                <h3>contact</h3>
+                <p>natsaran Sae-oueng</p>
+                <p>natsaran.sae-@kmutt.ac.th</p>
+                <p>65130500022</p>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

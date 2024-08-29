@@ -1,0 +1,412 @@
+/* set รูปภาพพื้นหลัง ขนาด ตำแหน่ง ไม่วนรูปซ้ำ ความโปร่ง*/
+/* ตั้งรูปแบบตัวหนังสือ ไม่มีช่องว่างกรอบนอก */
+body {
+    margin: 0%;
+    background-image: url("../img/dawn.jpg") , url('../img/file.jpg'), url('../img/jonny-8-1-enhanced.jpg'), url('../img/schoolclassroom.jpg'), 
+    url('../img/scholarshall02.jpg'), url('../img/castle.jpg'), url('../img/night.jpg');
+    background-position: top, center 1015px, center 2035px, center 3055px, center 4075px, center 5100px,center 6125px;
+    background-color: #7F7F7F;
+    background-size: 100% 1035px ;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    font-family:'Times New Roman', Times, serif;
+    background-attachment: scroll;
+}
+
+/* สร้าง Navbar เป็น flex ด้านบนสุดของหน้า ตั้งค่าขนาด ให้มันอยู่ที่เดิม และมีสีดำ */
+/* ใน Navbar มีปุ่มย่อยๆ ให้อย่างตรงกลางด้านขวา และมีช่องว่าง */
+.Menu {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-color: black;
+    height: 95px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+    align-items: center;
+}
+
+/* ตั้งค่าตัวหนังสือและตำแหน่งของปุ่มกดด้านใน Menu  */
+.Menu > a {
+    position: relative;
+    font-size: 15px;
+    right: 35px;
+    color: white;
+    text-transform: uppercase;
+    padding: 5px;
+    text-decoration: none;
+}
+
+/* ตั้งค่าปุ่ม Home ที่อยู่ด้านใน Menu ให้อยู่ทางด้านซ้าย มีสีขาว*/
+.Menu > .home {
+    position: fixed;
+    left: 30px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px;
+}
+
+/* ตั้งค่าลิงก์ปุ่มกดไม่ให้มีเส้นด้านใต้ตัวหนังสือ */
+.Menu a {
+    text-decoration: none;
+}
+
+/* ตั้งค่าลิงก์ปุ่มกดทั้งหมดใน Menu เป็นสีขาว */
+.Menu a:link {
+    color: white;
+}
+
+/* ตั้งค่าลิงก์ปุ่มกดทั้งหมดใน Menu ที่เคยเข้าไปแล้วเป็นสีขาว */
+.Menu a:visited {
+    color: white;
+}
+
+/* ตั้งค่าลิงก์ปุ่มกดทั้งหมดใน Menu รวมทั้งปุ่ม Home เมื่อเวลาเอาเม้าส์ไปชี้ให้มีกรอบรอบตัวหนังสือมีสีเป็นสีตามกำหนด*/
+.Menu > a:hover, .home:hover {
+    background-color: rgba(245, 245, 245, 0.185);
+    padding: 5px;
+    border-radius: 4px;
+}
+
+/* เมื่อกดปุ่มทั้งหมดใน Menu จะเปลี่ยนสีตัวหนังสือเป็นสีดำ*/
+.Menu > a:active, .home>a:active {
+    color: black;
+}
+
+
+/* สร้างกล่อง content ให้มีขนาดและช่องว่างตามข้างล่าง และให้เป็นกล่องสี่เหลี่ยมที่มีความมน */
+#CONTENT .contentbox {
+    width: 80%;
+    margin: 150px 0 300px 100px;
+    padding: 20px 50px 50px;
+    border-radius: 30px;
+}
+
+/* กล่อง content1 ให้มีพื้นหลังเป็นสีขาว */
+#content1 {
+    background-color: white;
+}
+
+/* กล่อง content1 ให้มีพื้นหลังเป็นสีขาว แต่มีความโปร่งใสมาก*/
+#content2 {
+    background-color: rgba(220, 220, 220, .1);
+}
+
+/* ตั้งค่า font ขนาด สี และเงาของ tag h1 และจัดให้มันอยู่ตรงกลาง*/
+h1 {
+    text-align: center;
+    color: #371380;
+    font-size: 65px;
+    text-shadow: 5px 5px 50px #371380;
+    -webkit-text-stroke: .4px black;
+}
+
+/* ตั้งค่า font ขนาด สี ตัวหนังสือตัวใหญ่ และเงาของ tag h2 และจัดให้มันอยู่ตรงกลาง*/
+h2 {
+    font-size: 50px;
+    text-align: center;
+    color: orange;
+    text-shadow: 5px 5px 50px orange;
+    font-weight: bold;
+    -webkit-text-stroke: .4px black;
+    text-transform: uppercase;
+}
+
+/* ตั้งค่า font ขนาด สี ตัวหนังสือตัวใหญ่ และเงาของ tag h3 และจัดให้มันอยู่ตรงกลาง*/
+h3 {
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    text-shadow: 5px 5px 50px black;
+    font-weight: bold;
+    -webkit-text-stroke: .4px black;
+    text-transform: uppercase;
+}
+
+/* ตั้งค่า font ขนาด สี ตัวหนังสือตัวใหญ่ และเงาของ tag h4 */
+h4 {
+    color: #371380;
+    font-size: 20px;
+    margin-bottom: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* ตั่งค่าขนาด font ของ paragraph <p> และให้มันอยู่ตรงกลาง กล่อง content1*/
+#content1 > p {
+    font-size: 20px;
+    text-align: center;
+}
+
+/* สร้างกล่องเปล่าเพื่อสร้างปุ่มกด begin ให้เป็น flex และให้อยู่ตรงกลางด้านล่าง */
+#beginbutton {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+/* สร้างปุ่มกดให้เป็นกล่องสี่เหลี่ยมมีความมนและมีสีแดง มีขอบเป็นสีดำ และตั้งค่า font ของลิงก์ไม่ให้มีเส้นด้านใต้และมีสีขาว มีช่องว่างด้านบน */
+#beginbutton > a {
+    color: white;
+    background-color: #FF3355;
+    text-transform: uppercase;
+    padding: 5px 60px;
+    margin-top: 20px;
+    text-decoration: none;
+    border: solid black 0.1mm;
+}
+
+/* ตั้งค่าปุ่มกด begin เมื่อเวลาเอาเม้าส์ไปชี้มีสีตามข้างล่าง */
+#beginbutton > a:hover {
+    background-color: #371380;
+}
+
+/* ตั้งค่าปุ่มกด begin ตัวลิงก์ให้มีสีขาว และเมื่อเคยกดเข้าไปแล้วให้แสดงเป็นแบบเดิม */
+#beginbutton > a:link , #beginbutton > a:visited{
+    color: white;
+}
+
+/* สร้าง grid ที่เป็นกล่องเปล่าเพื่อใส่ grid-item โดยให้มีช่องว่าง และการขัดเรียงคอลัม และให้มีสีพื้นหลังเหมือนตัวกล่อง content */
+.grid-container {
+    display: grid;
+    column-gap: 5px;
+    row-gap: 5px;
+    grid-template-columns: auto auto ;
+    background-color: rgba(135, 206, 235, .1);
+    border-radius: 10px;
+}
+
+/* ใส่กล่องสี่เหลี่ยม grid-item เข้าไปในกล่องที่สร้าง grid-container ไว้ โดยที่นี้มี 4 กล่อง ให้อยู่ตรงกลางมีขนาด สี เงา ตามกำหนด และกำหนดปุ่มกดเป็นลิงก์ไม่ให้มีเส้นด้านใต้*/
+.grid-item {
+    background-color: antiquewhite;
+    text-align: center;
+    padding: 50px;
+    border-radius: 10px;
+    border: solid black 0.5px;
+    text-decoration: none;
+    text-shadow: 5px 5px 50px orange ;
+    font-weight: bold;
+}
+
+/* ตั้งค่าปุ่มกดที่เป็นลิงก์ใน grid ให้มีสีดำ และเป็นแบบเดิมเมื่อเคยเข้าไปแล้ว*/
+a.grid-item:link,a.grid-item:visited {
+    color: black;
+}
+
+/* สร้างกล่องเปล่าที่เป็นไว้ใส่ content ใหม่ โดยมีกำหนดขนาด เว้นว่าง ให้พอดีกับทุกหน้า*/
+.journeybox {
+    margin: 120px 0 200px 150px;
+    padding: 20px 50px 50px;
+    border-radius: 10px;
+    width: 80%;
+}
+
+/* สร้างกล่องเปล่าที่เป็นไว้ใส่ content ใน journeybox ให้เป็น flex และให้ด้านในอยู่ตรงกลาง และมีช่องว่าง */
+.containcontent {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* สร้างกล่อง content ด้านใน ให้มีขนาด สี ตามกำหนด */
+.jnbox {
+    background-color: white;
+    width: 30%;
+    height: 350px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* กำหนดกล่องรูปภาพที่อยู่ด้านในกล่อง content */
+.jnbox .image {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 150px;
+    background-size: 100%;
+    background-position: center bottom;
+}
+
+/* กำหนดให้เวลากดลิงก์เว็ปจะเลื่อนแบบ smooth */
+html {
+    scroll-behavior: smooth;
+}
+
+/* #img1-#img8 ใส่รูปภาพและจัดตำแหน่งรูปภาพ */
+#img1 {
+    background-image: url('../img/johannes-figlhuber-volcanobeach.jpg');
+}
+
+#img2 {
+    background-image: url('../img/david-frasheski-tropicalspiresfin.jpg');
+}
+
+#img3 {
+    background-image: url('../img/claire-lin-img-0824.jpg');
+}
+
+#img4 {
+    background-image: url('../img/anato-finnstark-petit-autumn.jpg');
+    background-position: center top;
+}
+
+#img5 {
+    background-image: url('../img/christmas2.jpg');
+}
+
+#img6 {
+    background-image: url('../img/deseryt.jpg');
+}
+
+#img7 {
+    background-image: url('../img/florentboston.jpg');
+}
+
+#img8 {
+    background-image: url('../img/train-station.jpg');
+}
+
+/* กำหนดปุ่ม more ให้ตัวหนังสือเป็นตัวใหญ่ขนาดเล็ก มีขนาดตามด้านล่าง */
+a.more {
+    font-variant: small-caps;
+    font-size: 17px;
+}
+
+/* ตั้งค่าปุ่ม more ให้มีสีและไม่มีเส้นด้านใต้ */
+a.more:link,a.more:visited {
+    color: #FF3355;
+    text-decoration: none;
+}
+
+/* ตั้งค่าปุ่ม more เวลาเอาเม้าส์ไปชี้มีสีด้านล่าง */
+a.more:hover {
+    color: #371380;
+}
+
+/* สร้างกล่องไว้ใส่ปุ่ม next และ back ให้เป็น flex ด้านในอยู่ตรงกลางด้านขวาและสลับตำแหน่งของปุ่ม มีช่องว่าง*/
+.next {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 10px;
+    align-self: flex-end;
+}
+
+/* ตั้งค่าปุ่มให้เป็นสี่เหลี่ยมเล็กมีขนาด สี ช่องว่างด้านบน และไม่มีเส้นด้านใต้*/
+.next > a { 
+    background-color: rgb(67, 67, 170);
+    color: white;
+    padding: 2px 8px 4px;
+    border-radius: 10px;
+    position: relative;
+    text-decoration: none;
+    margin-top: 40px;
+    font-variant: small-caps;
+}
+
+/* ตั้งค่าปุ่ม next และ back เวลาเอาเม้าส์ไปชี้ให้เปลี่ยนสีตามข้างล่าง */
+.next > a:hover {
+    background-color: black;
+}
+
+/* สร้างกล่องเปล่าที่เป็นหน้า contact ให้เป็น flex มีขนาด ช่องว่างระหว่างที่กำหนด และอยู่ตรงกลาง*/
+#contactpage {
+    display: flex;
+    margin-top: 120px;
+    height: 780px;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+/* สร้าง Navbar ที่อยู่ข้างล่าง ให้เป็น flex และด้านในให้อยู่ตรงกลางและมีช่องว่าง คล้ายๆกับ Navbar ที่อยู่ด้านบน แต่เปลี่ยนปุ่มกดข้างใน*/
+.Footer {
+    background-color: black;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 15%; 
+}
+
+/* ตั้งค่าปุ่มกดข้างใน ให้มีสี ขนาด รูปแบบ และไม่มีเส้นด้านใต้ */
+.Footer > a {
+    position: relative;
+    color: #7F7F7F;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/* ตั้งค่าเพิ่มเติมให้ตัวหนังสือที่ไม่ใช่ตัวหนังสือพิเศษอยู่ด้านล่างโดยกำหนดตำแหน่งให้กับมัน */
+.Footer > a > p {
+    position: absolute;
+    font-size: 10px;
+    margin: 0 0 0 -4px;
+    padding: 0;
+}
+
+/* กำหนดตัวหนังสือพิเศษให้มีขนาดใหญ่ขึ้น */
+.Footer .special {
+    font-size: 25px;
+} 
+
+/* กำหนดให้ปุ่มกดด้านล่างเวลาเอาเม้าส์ไปชี้ให้มีสีเหลือง */
+.Footer > a:hover{
+    color: rgba(255, 222, 36, 0.925);
+}
+
+/* สร้างตัวคั่นระหว่างหน้า */
+p.scroll {
+    visibility: hidden;
+    background-color: aliceblue;
+}
+
+
+/* ตั้งค่า responsive ให้เปลี่ยนเมื่อขนาดเว็ปเปลี่ยน */
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+    .Footer {
+        gap: 10%;
+    }
+    #CONTENT .contentbox {
+        width: 60%;
+        height: auto;
+        margin: 200px 0 350px 125px;
+    }
+    .containcontent{
+        gap: 10px;
+    }
+    .journeybox {
+        width: 80%;
+        height: auto;
+        margin: 100px 0 220px 50px;
+    }
+    .jnbox {
+        width: 40%;
+    }
+    .jnbox .image {
+        height: 100px;
+    }
+    
+}
+
+@media only screen and (min-width: 1440px) {
+    #CONTENT .contentbox {
+        width: 50%;
+        height: 400px;
+        margin: 180px 0 350px 425px;
+    }
+    .Footer {
+        height: 70px;
+    }
+    .Footer a {
+        margin-top: -11px;
+    }
+}

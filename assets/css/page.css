@@ -1,0 +1,120 @@
+/* set รูปภาพพื้นหลัง ขนาด ตำแหน่ง ไม่วนรูปซ้ำ ความโปร่ง*/
+body{
+    margin: 0;
+    opacity: .85;
+    background-repeat: no-repeat;
+    background-color: #1d1d1d;
+    background-size: 100% 1000px;
+}
+
+/* สร้าง Navbar เป็น flex ด้านบนสุดของหน้า ตั้งค่าขนาด ให้มันอยู่ที่เดิม และมีสีดำ */
+/* ใน Navbar มีปุ่มย่อยๆ ให้อย่างตรงกลางด้านขวา และมีช่องว่าง */
+.Menu {
+    top: 0;
+    z-index: 1;
+    background-color: black;
+    height: 95px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    align-items: center;
+}
+
+/* ตั้งค่าปุ่มใน Menu ไม่ให้มีเส้นด้านใต้ */
+.Menu a {
+    text-decoration: none;
+}
+
+/* ตั้งค่าตัวหนังสือและตำแหน่งของปุ่มกดด้านใน Menu  */
+.Menu > a {
+    position: relative;
+    font-size: 15px;
+    right: 50px;
+    color: white;
+    text-transform: uppercase;
+    padding: 5px;
+    text-decoration: none;
+}
+
+/* ตั้งค่าปุ่ม Home ที่อยู่ด้านใน Menu ให้อยู่ทางด้านซ้าย มีสีขาว*/
+.Menu > .home {
+    position: absolute;
+    left: 30px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px;
+}
+
+/* ตั้งค่าลิงก์ปุ่มกดทั้งหมดใน Menu เป็นสีขาว */
+.Menu a:link {
+    color: white;
+}
+
+/* ตั้งค่าลิงก์ปุ่มกดทั้งหมดใน Menu ที่เคยเข้าไปแล้วเป็นสีขาว */
+.Menu a:visited {
+    color: white;
+}
+
+/* ตั้งค่าลิงก์ปุ่มกดทั้งหมดใน Menu รวมทั้งปุ่ม Home เมื่อเวลาเอาเม้าส์ไปชี้ให้มีกรอบรอบตัวหนังสือมีสีเป็นสีตามกำหนด*/
+.Menu > a:hover, .home:hover {
+    background-color: rgba(245, 245, 245, 0.185);
+    padding: 5px;
+    border-radius: 4px;
+}
+
+/* เมื่อกดปุ่มทั้งหมดใน Menu จะเปลี่ยนสีตัวหนังสือเป็นสีดำ*/
+.Menu > a:active, .home>a:active {
+    color: black;
+}
+
+/* สร้างกล่องเปล่าด้านล่างมีขนาดที่กำหนด */
+#Footer {
+    height: 200px;
+    width: 100%;
+}
+
+/* สร้างกล่อง content ที่ใส่ในกล่องเปล่าที่สร้างไว้ ให้เป็น flex และอยู่จุดเริ่มต้น เรียงเป็นแถว มีสีตัวหนังสือ และช่องว่าง มีตำแหน่งห่างจากด้านซ้าย */
+#containfooter {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 100px;
+    color: white;
+    position: relative;
+    left: 20%;
+    text-transform: capitalize;
+}
+
+/* กำหนดให้ตัวหนังสือและลิงก์ที่อยู่ด้านล่างมีสีตามกำหนด */
+#containfooter p,#containfooter a {
+    color: #9c9c9c;
+}
+
+/* กำหนดให้ตัวหนังสือและลิงก์ที่อยู่ด้านล่างมีสีตามกำหนด และไม่มีเส้นด้านใต้ รวมถึงตอนที่เคยกดไปแล้ว */
+#containfooter a:link,#containfooter a:visited {
+    color: #9c9c9c;
+    text-decoration: none;
+}
+
+/* กำหนดให้ตัวหนังสือและลิงก์ที่อยู่ด้านล่าง เวลาเอาเม้าส์ไปชี้มีสีตามกำหนด */
+#containfooter a:hover {
+    color: #FF3355;
+}
+
+/* สร้างกล่องไว้เขียน diary ตรงกลางหน้า มีกรอบนอก และขนาด สีกล่อง*/
+.contentbox {
+    margin: 2.5% 24%;
+    width: 52%;
+    height: 730px;
+    background-color: white;
+    border-radius: 40px;
+}
+
+/* กำหนดตัวหนังสือด้านในกล่องให้มีขนาด และกรอบรอบตัวหนังสือ */
+.contentbox p {
+    padding: 10px;
+    font-size: 20px;
+}
